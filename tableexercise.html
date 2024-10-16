@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rank Table</title>
+    <!-- The <style> block contains all the CSS for the table -->
+    <style>
+        /* This targets the entire table, setting its width, collapsing borders, and adding shadow */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the table */
+        }
+
+        /* This targets the header row of the table */
+        thead tr {
+            background-color: #009688; /* A teal-green color for the header background */
+            color: white; /* White text color */
+        }
+
+        /* This styles both the table headers (th) and table data cells (td) */
+        th, td {
+            padding: 12px; /* Adds padding inside the cells for spacing */
+            border-bottom: 2px solid #ddd; /* Adds a light gray border under each cell */
+        }
+
+        /* This targets even-numbered rows in the table body to alternate the background color */
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2; /* Light gray background for alternating rows */
+        }
+
+        /* This targets the table body rows and adds a border to the bottom of each row */
+        tbody tr td {
+            border-bottom: 1px solid #ddd; /* Thin gray border at the bottom of the cells */
+        }
+
+        /* This targets the "Name", "Points", and "Team" columns to make them bold and green */
+        tbody tr td:nth-child(2),
+        tbody tr td:nth-child(3),
+        tbody tr td:nth-child(4) {
+            font-weight: bold; /* Bold text */
+            color: #009688; /* Teal-green color */
+        }
+
+        /* This overrides the bold and green styling for other table rows (like Domenic's row) */
+        tbody tr td:nth-child(2):not(:nth-child(2)) {
+            font-weight: normal;
+            color: inherit; /* Resets to default color and weight */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Rank Table</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Points</th>
+                <th>Team</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Domenic</td>
+                <td>88,110</td>
+                <td>dcode</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Sally</td>
+                <td>72,400</td>
+                <td>Students</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Nick</td>
+                <td>52,300</td>
+                <td>dcode</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
